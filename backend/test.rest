@@ -1,0 +1,20 @@
+POST http://127.0.0.1:8000/api/transactions/
+Content-Type: application/json
+
+{
+    "transaction_number": "12312312",
+    "transaction_type": "receive",
+    "edited_by": 1,
+    "products": [
+        {
+            "product": 1,
+            "quantity": 3,
+            "price": 399.00
+        },
+        {
+            "product": 2,
+            "quantity": 3,
+            "price": 399.00
+        }
+    ]
+}

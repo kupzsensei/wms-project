@@ -1,0 +1,12 @@
+{
+    "transaction_number": "12312312",
+    "transaction_type": "delivery",
+    "user": 1,
+    "products": [
+        {
+            "product": 1,
+            "quantity": 3,
+            "price": 399.00
+        }
+    ]
+}
