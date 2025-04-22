@@ -5,7 +5,7 @@ from .serializers import ProductCreateSerializer , ProductListSerializer
 
 # Create your views here.
 class ProductListCreateView(generics.ListCreateAPIView):
-    queryset = Product.objects.all()
+    queryset = Product.objects.select_related('brand')
 
     def get_serializer_class(self):
         if self.request.method == 'GET':

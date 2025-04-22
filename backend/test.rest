@@ -1,5 +1,6 @@
-POST http://127.0.0.1:8000/api/transactions/
+PATCH http://127.0.0.1:8000/api/transaction/16/
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ0MDkwOTkyLCJpYXQiOjE3NDQwMDQ1OTIsImp0aSI6IjRlNjJiYmEwZGY3YjQxNWFhNGFkNmUxMTc2NWIyMjM0IiwidXNlcl9pZCI6Mn0.cpdhSAa47csXuEK97q6BucPjP9mgdGGb0ti6JFH0w60 
 
 {
     "transaction_number": "12312312",

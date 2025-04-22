@@ -26,7 +26,8 @@ from rest_framework_simplejwt.views import TokenVerifyView
 # views
 from brand.views import BrandView , BrandDetailView
 from product.views import ProductListCreateView , ProductRetrieveUpdateDestroyView
-from transaction.views import TransactionListCreateView
+from transaction.views import TransactionListCreateView,TransactionRetrieveUpdateDestroyView
+from outlet.views import OutletListCreateView , OutletRetrieveUpdateDestroyView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -37,5 +38,8 @@ urlpatterns = [
     path('api/brand/<int:pk>/' ,BrandDetailView.as_view()),
     path('api/products/' , ProductListCreateView.as_view()),
     path('api/product/<int:pk>/', ProductRetrieveUpdateDestroyView.as_view()),
-    path('api/transactions/', TransactionListCreateView.as_view())
+    path('api/transactions/', TransactionListCreateView.as_view()),
+    path('api/transaction/<int:pk>/', TransactionRetrieveUpdateDestroyView.as_view()),
+    path('api/outlets/', OutletListCreateView.as_view()),
+    path('api/outlet/<int:pk>/', OutletRetrieveUpdateDestroyView.as_view()),
 ]

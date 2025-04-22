@@ -2,7 +2,7 @@ from django.shortcuts import render
 from rest_framework import generics
 from .serializers import BrandSerializer
 from .models import Brand
-from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from rest_framework.permissions import DjangoModelPermissions
 from rest_framework.exceptions import APIException
 from django.db.models.deletion import ProtectedError
 from rest_framework.response import Response
@@ -12,10 +12,10 @@ from rest_framework import status
 class BrandView(generics.ListCreateAPIView):
     serializer_class = BrandSerializer
     queryset = Brand.objects.all()
-    permission_classes = [IsAuthenticatedOrReadOnly]
+    permission_classes = [DjangoModelPermissions]
 
 class BrandDetailView(generics.RetrieveUpdateDestroyAPIView):
-    permission_classes = [IsAuthenticatedOrReadOnly]
+    permission_classes = [DjangoModelPermissions]
     serializer_class = BrandSerializer
     queryset = Brand.objects.all()
 
